@@ -14,6 +14,9 @@ services:
     container_name: todo-application-pipeline-todo-application-1
     ports:
       - "8082:8081"
+    environment:
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Nuvelabs123$
     networks:
       - todo-network
     depeds_on:
@@ -21,7 +24,7 @@ services:
   mysql-db:
     image: mysql:8
     container_name: todo-application-pipeline-mysql-db-1
-    environmane:
+    environment:
       MYSQL_USER: root
       MYSQL_PASSWORD: Root@123
       MYSQL_DATABASE: mysql-db
