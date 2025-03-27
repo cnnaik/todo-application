@@ -30,7 +30,7 @@ services:
       MYSQL_DATABASE: mysql-db
     ports:
       - "3307:3306"
-    networs:
+    networks:
       - todo-network
     volumes:
       - mysql-data:/var/lib/mysql
